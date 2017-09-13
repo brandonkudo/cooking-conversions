@@ -3,8 +3,9 @@ var pounds = function(number1, sixteen) {
   return number1 * sixteen;
 };
 
-var subtract = function(number1, number2) {
-  return number1 - number2;
+var gallons = function(number1, four) {
+  var four = 4;
+  return number1 * four;
 };
 
 var multiply = function(number1, number2) {
@@ -26,13 +27,13 @@ $(document).ready(function() {
     $("#output-pounds").text(result);
   });
 
-  $("form#subtract").submit(function(event) {
+  $("form#gallons").submit(function(event) {
     event.preventDefault();
 
-    var number1 = parseInt($("#subtract1").val());
-    var number2 = parseInt($("#subtract2").val());
-    var result = subtract(number1, number2);
-    $("#output-subtract").text(result);
+    var number1 = parseInt($("#gallons1").val());
+    var four = parseInt($("#gallons2").val());
+    var result = gallons(number1, four);
+    $("#output-gallons").text(result);
   });
 
   $("form#multiply").submit(function(event) {
