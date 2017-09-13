@@ -8,13 +8,12 @@ var gallons = function(number1, four) {
   return number1 * four;
 };
 
-var multiply = function(number1, number2) {
-  return number1 * number2;
+var quarts = function(number1, two) {
+  var two = 2;
+  return number1 * two;
 };
 
-var divide = function(number1, number2) {
-  return number1 / number2;
-};
+
 
 $(document).ready(function() {
 
@@ -36,22 +35,15 @@ $(document).ready(function() {
     $("#output-gallons").text(result);
   });
 
-  $("form#multiply").submit(function(event) {
+  $("form#quarts").submit(function(event) {
     event.preventDefault();
 
-    var number1 = parseInt($("#multiply1").val());
-    var number2 = parseInt($("#multiply2").val());
-    var result = multiply(number1, number2);
-    $("#output-multiply").text(result);
+    var number1 = parseInt($("#quarts1").val());
+    var number2 = parseInt($("#quarts2").val());
+    var result = quarts(number1, number2);
+    $("#output-quarts").text(result);
   });
 
-  $("form#divide").submit(function(event) {
-    event.preventDefault();
 
-    var number1 = parseInt($("#divide1").val());
-    var number2 = parseInt($("#divide2").val());
-    var result = divide(number1, number2);
-    $("#output-divide").text(result);
-  });
 
 });
